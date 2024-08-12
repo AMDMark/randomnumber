@@ -46,7 +46,7 @@ async function fetchPage() {
 setInterval(fetchPage, 6000);
 
 // Start the server
-fastify.listen(3000, (err, address) => {
+fastify.listen(3000, '0.0.0.0', (err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
